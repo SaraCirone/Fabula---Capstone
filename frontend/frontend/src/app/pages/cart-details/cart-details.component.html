@@ -1,0 +1,91 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col col-sm-12 col-md-1 col-lg-2 col-xl-2"></div>
+        <div class="col col-sm-12 col-md-10 col-lg-8 col-xl-8">
+
+
+            <div *ngIf="cartItems.length > 0">
+
+                <table class="table table-bordered box">
+                    <tr>
+                        <th width="20%">
+                            Immagine
+                        </th>
+                        <th width="50%">
+                            Dettagli prodotto
+                        </th>
+                        <th width="30%">
+
+                        </th>
+                    </tr>
+                    <tr *ngFor="let tempCartItem of cartItems">
+                        <td>
+                            <img src="{{tempCartItem.imgurl}}" class="img-fluid" width="150px">
+                        </td>
+                        <td>
+                            <h4>{{tempCartItem.titolo}}</h4>
+                            <p style="font-size: 20px;">
+                                <font color="green"><b>{{tempCartItem.prezzo | currency:'EUR'}}</b></font>
+                            </p>
+                        </td>
+                        <td>
+
+                            <label>Quantità: </label>
+                            <div class="row no-gutters">
+                                <div class="col">
+                                    <button (click)="incrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="col ml-4 mr-2">
+                                    {{tempCartItem.quantity}}
+                                </div>
+                                <div class="col">
+                                    <button (click)="decrementQuantity(tempCartItem)" class="btn btn-primary btn-sm">
+                                        <i class="bi bi-dash-lg"></i>
+                                    </button>
+                                </div>
+                                <div class="col-8">
+
+                                </div>
+                            </div>
+                            <div class="col">
+                            <button (click)="remove(tempCartItem)" class="btn btn-danger btn-sm"> <i class="bi bi-cart-dash"></i> Elimina</button>
+
+                            <p class="mt-2"> Subtotale : <font color="green"><b>{{tempCartItem.quantity *
+                                        tempCartItem.prezzo | currency: 'EUR'}}</b></font>
+                            </p>
+                        </div>
+                        </td>
+                    </tr>
+
+                    <tr style="background-color: rgb(228, 228, 228);">
+                        <td style="text-align: center; font-style: italic;">
+                            <p>TOTALE CARRELLO </p>
+                        </td>
+                        <td style="text-align: center;">
+                            <p>Quantità totale: <b>{{totalQuantity}}</b></p>
+                        </td>
+                        <td style="text-align: center;">
+
+                            <p>Prezzo Totale: <b>{{totalPrice | currency: 'EUR'}}</b></p>
+                        </td>
+                    </tr>
+                    <tr style="background-color: rgb(228, 228, 228);">
+                        <td colspan="3" style="text-align: center;">
+                          <a routerLink="/checkout" class="btn btn-login"> Vai al Pagamento</a>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div *ngIf="cartItems.length == 0" class="alert alert-warning col-12 text-center fs-3">
+                <img src="https://static.thenounproject.com/png/1527904-200.png">
+
+                                <p>Il tuo carrello è vuoto</p>
+            </div>
+        </div>
+        <div class="col col-sm-12 col-md-1 col-lg-2 col-xl-2"></div>
+    </div>
+</div>

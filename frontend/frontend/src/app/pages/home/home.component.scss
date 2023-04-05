@@ -1,0 +1,62 @@
+.cardGenere {
+width: 200px;
+padding-bottom: 5px;
+border-radius: 16px;
+box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+margin-left: 20px;
+text-align: center;
+background-color: #1e8c79;
+opacity: 0.8;
+padding: 10px;
+margin-bottom: 20px;
+}
+
+.cardGenere a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+//Avventura
+.cardGenere a:hover {
+    color:rgb(71, 247, 150);
+}
+
+.boxGeneri {
+    text-align: center;
+}
+
+h1 {
+   color: #1e8c79;
+   font-style: oblique;
+}
+
+.cardGenere:hover {
+    outline: solid 3px aquamarine;;
+    outline-offset: -3px;
+}
+
+.btn-login {
+    background-color: #7fffd4;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #1e8c79;
+  }
+
+  .card-header {
+    background-color: #1e8c79;
+    color: white;
+    text-align: center;
+  }
+
+.card-footer {
+    background-color: white;
+    border: none;
+}
+
+
+.containergrid {
+    box-shadow: -4px -17px 15px -3px rgba(68, 68, 68, 0.1);
+}

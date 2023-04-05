@@ -1,0 +1,134 @@
+<!-- <div class="container-fluid bg-nav">
+    <div class="row d-flex pt-3">
+        <div class="col d-flex justify-content-center align-items-center">
+            <div class="cart-area d-n">
+                <app-cart-status></app-cart-status>
+            </div>
+        </div>
+        <div class="col text-center"><img id="logo" src="https://i.imgur.com/JxsUz1j.png">
+            <img id="logo2" src="https://i.imgur.com/JxsUz1j.png">
+        </div>
+
+        <div class="col d-flex justify-content-center align-items-center">
+            <div class="btn-group">
+                <button type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg></button>
+                <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/login">Accedi</a></li>
+                  <li><a class="dropdown-item"  routerLink="/registrazione">Registrati</a></li>
+                  <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" *ngIf="BasicAuth.isLogged()"  routerLink="/logout">Logout {{BasicAuth.loggedUser()}}</a></li>
+                  <li><a class="dropdown-item disabled" *ngIf="!BasicAuth.isLogged()" href="#">Logout</a></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-expand-lg bg-nav navbar-dark sticky-top" style="margin-top: -1px; padding-bottom: 20px;">
+    <div class="container-fluid">
+        <div class="col text-end">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#" id="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product-list" target="_self">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/pacchetti" target="_self">Pacchetti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/chisiamo" target="_self">F.A.Q</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<!--VECCHIA, DA TENERE IN CASO-->
+
+<div class="container-fluid bg-nav">
+    <div class="row d-flex pt-3">
+        <div class="col d-flex justify-content-center align-items-center">
+        </div>
+        <div class="col text-center"><img id="logo" src="https://i.imgur.com/JxsUz1j.png">
+            <img id="logo2" src="https://i.imgur.com/JxsUz1j.png">
+        </div>
+
+        <div class="col d-flex justify-content-center align-items-center">
+        </div>
+    </div>
+</div>
+
+
+
+<nav class="navbar navbar-expand-lg bg-nav navbar-dark sticky-top" style="margin-top: -1px; padding-bottom: 20px;">
+    <div class="container-fluid">
+        <div class="col text-start">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+            <div class="cart-area d-n">
+                <app-cart-status></app-cart-status>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " routerLink="/home" target="_self">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/product-list" target="_self">Catalogo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/pacchetti" target="_self">Pacchetti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/chisiamo" target="_self">F.A.Q</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col d-flex justify-content-center align-items-center">
+            <div class="btn-group">
+                <button type="button" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg></button>
+                <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" routerLink="/login">Accedi</a></li>
+                  <li><a class="dropdown-item"  routerLink="/registrazione">Registrati</a></li>
+                  <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" *ngIf="BasicAuth.isLogged()"  routerLink="/logout">Logout {{BasicAuth.loggedUser()}}</a></li>
+                  <li><a class="dropdown-item disabled" *ngIf="!BasicAuth.isLogged()" href="#">Logout</a></li>
+                </ul>
+              </div>
+        </div>
+
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+<!-- <a href="shopping-detail.html">
+    <svg _ngcontent-xxj-c62="" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+    viewBox="0 0 16 16" class="bi bi-cart-fill" style="margin-top: 12px;">
+    <path _ngcontent-xxj-c62=""
+        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+    </path>
+</svg>
+
+    <div class="total">19.22 <span> 2</span> </div> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+</a> -->
+
+<div class="carrello">
+    <a routerLink="/cart-details">
+      <div class="total"><span style="margin-right: 5px;">{{totalPrice | currency: 'EUR'}}</span> | <span style="margin-right: 30px;">{{totalQuantity}}</span><i class="bi bi-cart-fill"></i></div>
+    </a>
+</div>

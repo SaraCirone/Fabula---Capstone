@@ -1,0 +1,107 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-1 col-lg-2">
+            <!-- <aside class="menu-sidebar ">
+                <div class="menu-sidebar-content js-scrollbar1">
+                    <nav class="navbar-sidebar">
+                        <ul class="list-unstyled navbar-list">
+                            <li>
+                                <a routerLink="/category/1" routerLinkActive="active-link">Books</a>
+                            </li>
+                            <li>
+                                <a routerLink="/category/2" routerLinkActive="active-link">Coffee Mugs</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </aside> -->
+		</div>
+		<div class="col-sm-12 col-lg-12">
+            <!-- <div class="d-flex justify-content-center mt-3">
+            <form class="form-header" onsubmit="return false;" method="GET">
+                <input class="au-input au-input-xl" type="text" name="search"
+                    placeholder="Cerca..." />
+                <button class="btn btn-login" type="submit">
+                    Cerca
+                </button>
+            </form>
+            </div> -->
+            <div class="card mb-4 d-flex mt-5">
+                <header class="card-header">
+
+                    <div class="cart-area d-n">
+                        <app-cart-status></app-cart-status>
+                    </div>
+
+                </header>
+                <div class="card-body">
+
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-3">
+                        <div class="col col-xxl-2 col-lg-3 col-md-4 col-sm-12" *ngFor="let tempProduct of product">
+                            <div class="col p-2">
+                                <div class="card card-product-grid text-center" style="min-height: 400px;">
+                                    <div class="titolo">
+                                        <h5 class="text-center"><a routerLink="/products/{{tempProduct.id}}" class="title mt-3 mb-2">{{tempProduct.titolo}}</a></h5>
+                                    </div>
+                                    <div class="imgBook"> <a routerLink="/products/{{tempProduct.id}}" class="img-wrap"><img src="{{tempProduct.imgurl }}" class="img-rounded"></a></div>
+
+                                    <div class="info-wrap">
+                                        <div class="price mb-2">
+                                           di  <font style="color: #1e8c79; font-style: italic;">{{tempProduct.autore}}</font><br>
+                                           <font style="color: #1e8c79;  font-size: 20px;"> {{tempProduct.prezzo | currency: "EUR"}}</font>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button (click)="addToCart(tempProduct)" class="btn btn-login mb-2"> Acquista</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+
+<!-- <section class="container-fluid">
+    <div class="card mb-4 d-flex mt-5">
+        <header class="card-header">
+            <h2 class="text-center ">Catalogo libri</h2>
+        </header>
+        <div class="card-body">
+
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xxl-5 g-3">
+                <div class="col col-xxl-2 col-lg-3 col-md-4 col-sm-12" *ngFor="let tempProduct of product">
+                    <div class="col p-2">
+                        <div class="card card-product-grid text-center" style="min-height: 400px;">
+                            <div class="titolo">
+                                <h5 class="text-center"><a href="#" class="title">{{tempProduct.titolo}}</a></h5>
+                            </div>
+                            <div class="imgBook"> <a href="#" class="img-wrap"><img src="{{tempProduct.imgurl }}" class="img-rounded"></a></div>
+
+                            <div class="info-wrap">
+                                <div class="price mb-2">
+                                   unità presenti:  <font style="color: red
+                                   ">{{tempProduct.unit}}</font><br>
+                                   <font style="color: #1e8c79;  font-size: 20px;"> {{tempProduct.prezzo | currency: "EUR"}}</font>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="btn btn-login mb-2"> Acquista</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+ -->

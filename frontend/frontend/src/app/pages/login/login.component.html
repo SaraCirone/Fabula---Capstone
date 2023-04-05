@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center">
+        <div class="modello">
+            <h4>Login utente</h4>
+            <label for="userId">Nome utente: </label><br>
+            <input type="text" id="userId" placeholder="Nome Utente" [(ngModel)]=userId>
+            <br>
+            <label for="password">Password: </label><br>
+            <input type="password" id="password" placeholder="Password utente" [(ngModel)]=password>
+            <br><br>
+            <button class="btn btn-login" (click)=gestAuth()>Login</button><br>
+            <div style="color: rgb(251, 255, 16)" *ngIf="!autenticato">
+                {{errMsg}}
+            </div>
+            <div>
+                <br>
+                <p>Non sei registrato?<a class="nav-link" routerLink="/registrazione"  target="_self">Registrati</a></p>
+            <a class="nav-link" routerLink="/pacchetti"  target="_self">Recupera Pssword</a>
+            </div>
+        </div>
+    </div>

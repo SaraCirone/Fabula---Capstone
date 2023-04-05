@@ -1,0 +1,36 @@
+<div class="container-fluid">
+	<div class="row">
+        <div class="col-sm-12 col-md-2"></div>
+		<div class="col-sm-12 col-lg-8 box">
+            <div class="card mb-4 d-flex mt-5">
+                <header class="card-header">
+                    <h3 class="text-center"> {{product.titolo}}</h3>
+                </header>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="{{product.imgurl }}" class="img-rounded img-fluid">
+                        </div>
+                        <div class="col-md-8 fs-5 box">
+                            <ul>
+                                <li><b>Titolo</b>: {{product.titolo}} </li>
+                                <li><b>Autore</b>: {{product.autore}}</li>
+                                <li><b>Numero Pagine</b>: {{product.numeropagine}}</li>
+                                <li><b>Formato</b>: {{product.formato}}</li>
+                                <li><b>Data di Pubblicazione</b>: {{product.datapubblicazione}}</li>
+                                <li><b>Lingua</b>: {{product.lingua}}</li>
+                                <li><b>Codice Libro</b>: {{product.codbook}}</li>
+                                <li><b>Prezzo</b>: {{product.prezzo | currency: "EUR"}}</li>
+                                <li><b>Pezzi Disponibili</b>: {{product.unit}}</li>
+                            </ul>
+                            <p>{{product.descrizione}}</p>
+                            <div class="text-center mt-5"> <button (click)="addToCart()" class="btn btn-login">Acquista</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <div class="col-sm-12 col-md-2"></div>
+	</div>
+</div>
+

@@ -1,0 +1,15 @@
+<div class="col">
+    <div class="card card-product-grid text-center">
+        <div class="titolo">
+            <h5 class="text-center"><a href="#" class="title">{{product.titolo}}</a></h5>
+        </div>
+        <div class="imgBook"> <a href="#" class="img-wrap"><img src="{{product.imgurl }}" class="img-rounded"></a></div>
+
+        <div class="info-wrap">
+            <div class="price mb-2">
+                {{product.unit}}
+                {{product.prezzo | currency: "EUR"}}
+            </div>
+        </div>
+    </div>
+</div>

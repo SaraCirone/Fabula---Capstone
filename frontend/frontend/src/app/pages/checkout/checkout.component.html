@@ -1,0 +1,254 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-1 col-lg-2"><!--Vuoto--></div>
+
+        <div class="col-12 col-md-10 col-lg-8">
+
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+                <div formGroupName="customer" class="box text-center">
+                    <!-- <h3 class="text-center">Dati Cliente</h3>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label>Nome</label>
+                            <div class="col-md-9">
+                                <div class="input-space">
+                                    <input formControlName="firstName" type="text">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <h4 class="text-center mb-4"> Dati Cliente <svg xmlns="http://www.w3.org/2000/svg" width="30"
+                            height="30" fill="currentColor" class="bi bi-person-vcard-fill" viewBox="0 0 16 16"
+                            style="margin-top: -5px;">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
+                        </svg>
+                    </h4>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Nome</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="firstName" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Cognome</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="lastName" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Email</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="email" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()" style="margin-top: 50px;">
+                <div formGroupName="shippingAddress" class="box text-center">
+                    <h4 class="text-center mb-4"> Dati Spedizione <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                      </svg>
+                    </h4>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Via/Piazza</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="street" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Città</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="city" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Paese</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="country" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Codice Postale</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="zipCode" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()" style="margin-top: 50px;">
+                <div formGroupName="creditCard" class="box text-center">
+                    <h4 class="text-center mb-4"> Metodo di Pagamento <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+                      </svg>
+                    </h4>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Tipo di Carta</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <select formControlName="cardType" >
+                                            <option>Visa</option>
+                                            <option>Mastercard</option>
+                                            <option>PayPal</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Nome sulla Carta</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="nameOnCard" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Numero Carta</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="cardNumber" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>CVV</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="securityCode" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Mese di Scadenza</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <select formControlName="expirationMonth"  >
+                                            <option *ngFor="let month of creditCaardMonths">
+                                                {{month}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Anno di Scadenza</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <select formControlName="expirationYear">
+                                            <option *ngFor="let year of creditCardYears">
+                                                {{year}}
+                                            </option>
+
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div style="margin-top: 20px">
+                <div class="container box">
+                    <h4 class="text-center mb-4"> Riepilogo Ordine <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+                        <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
+                      </svg>
+                    </h4>
+                    <div class="row">
+                        <div class="col-12 col-md-2 col-lg-2 text-end">
+
+                        </div>
+                        <div class="col-12 col-md-10 col-lg-8 fs-5">
+                            <div>
+                                <p>Totale pezzi: {{totalQuantity}}</p>
+                                <p>Totale: {{totalPrice | currency: 'EUR'}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 mb-5">
+                <button (click)=" onSubmit()" type="submit" class="btn btn-login">Procedi</button>
+            </div>
+        </div>
+
+
+        <div class="col-12 col-md-1 col-lg-2"><!--Vuoto--></div>
+
+    </div>
+</div>

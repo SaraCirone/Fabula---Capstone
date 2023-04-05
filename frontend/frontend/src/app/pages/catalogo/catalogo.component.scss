@@ -1,0 +1,54 @@
+img {
+    width: 120px;
+}
+
+.autoreName {
+    font-style: italic;
+
+}
+
+.autoreName:link {
+    text-decoration: none;
+    color: #1e8c79;
+}
+
+.autoreName:visited {
+    text-decoration: none;
+    color: #1e8c79;
+}
+.autoreName:hover {
+    text-decoration: none;
+    color: #1e8c79;
+    font-weight: bold;
+}
+
+.bookCard {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+
+}
+
+//Lista Categorie
+
+.categorie {
+    font-style: italic;
+
+}
+
+.categorie:link {
+    text-decoration: none;
+    color: #1e8c79;
+}
+
+.categorie:visited {
+    text-decoration: none;
+    color: #1e8c79;
+}
+.categorie:hover {
+    text-decoration: none;
+    color: #1e8c79;
+    font-weight: bold;
+}
