@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
@@ -25,6 +25,7 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
 import { CartDetailsComponent } from './pages/cart-details/cart-details.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { LoginStatusComponent } from './components/login-status/login-status.component';
 
 
 
@@ -49,6 +50,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     CartStatusComponent,
     CartDetailsComponent,
     CheckoutComponent,
+    LoginStatusComponent,
 
 
 

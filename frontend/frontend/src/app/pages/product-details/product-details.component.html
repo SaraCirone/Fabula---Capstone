@@ -21,10 +21,14 @@
                                 <li><b>Lingua</b>: {{product.lingua}}</li>
                                 <li><b>Codice Libro</b>: {{product.codbook}}</li>
                                 <li><b>Prezzo</b>: {{product.prezzo | currency: "EUR"}}</li>
-                                <li><b>Pezzi Disponibili</b>: {{product.unit}}</li>
+                                <!-- <li><b>Pezzi Disponibili</b>: {{product.unit}}</li> -->
                             </ul>
                             <p>{{product.descrizione}}</p>
-                            <div class="text-center mt-5"> <button (click)="addToCart()" class="btn btn-login">Acquista</button></div>
+
+                            <div class="text-center mt-5">
+                                <!-- <button (click)="addToCart()" class="btn btn-login">Acquista</button> -->
+                                <button *ngIf="isAuthenticated" (click)="addToCart()" class="btn btn-login mb-2">Acquista</button>
+                            </div>
                         </div>
                     </div>
                 </div>

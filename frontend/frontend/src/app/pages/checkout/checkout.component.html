@@ -95,13 +95,127 @@
                             </div>
                         </div>
                     </div>
+
+<!--
                     <div style="margin-bottom: 20px;">
                         <div class="container">
                             <div class="row">
-                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Paese</label></div>
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Regione</label></div>
                                 <div class="col-12 col-md-10 col-lg-8">
                                     <div class="input-space box2">
                                         <input formControlName="country" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Regione</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <select formControlName="country" (change)="getStates('shippingAddress')">
+                                            <option *ngFor="let country of countries" [ngValue]="country">
+                                                {{country.name }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Provincia</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <select formControlName="state">
+                                            <option *ngFor="let state of shippingAddressStates" [ngValue]="state">
+                                                {{state.name }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Codice Postale</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="zipCode" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()" style="margin-top: 50px;">
+                <div formGroupName="billingAddress" class="box text-center">
+                    <h4 class="text-center mb-4"> Dati Fatturazione <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                        <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                      </svg>
+                    </h4>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Via/Piazza</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="street" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Città</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <input formControlName="city" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Regione</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <select formControlName="country" (change)="getStates('billingAddress')">
+                                            <option *ngFor="let country of countries" [ngValue]="country">
+                                                {{ country.name }}
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-md-2 col-lg-2 text-end"><label>Provincia</label></div>
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <div class="input-space box2">
+                                        <select formControlName="state">
+                                            <option *ngFor="let state of billingAddressStates" [ngValue]="state">
+                                                {{ state.name }}
+                                            </option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

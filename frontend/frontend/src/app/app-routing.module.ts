@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './components/login/login.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { ChisiamoComponent } from './pages/chisiamo/chisiamo.component';
 import { CatalogoComponent } from './pages/catalogo/catalogo.component';
@@ -20,14 +20,28 @@ import { ProductService } from 'src/services/product.service';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartDetailsComponent } from './pages/cart-details/cart-details.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import {
+    OktaAuthModule,
+    OktaCallbackComponent,
+    OKTA_CONFIG
+  } from '@okta/okta-angular';
 
+  import { OktaAuth } from '@okta/okta-auth-js';
+
+import myAppConfig from './config/my-app-config';
+
+const oktaConfig = myAppConfig.oidc;
+
+const oktaAuth = new OktaAuth(oktaConfig);
 
 
 const routes: Routes = [
+    {path: 'login/callback', component: OktaCallbackComponent},
+    {path: 'login', component: LoginComponent},
+
     {path: "",component: HomeComponent },
     {path: "home/:userid", component: HomeComponent},
     {path: "home", component: HomeComponent },
-    {path: "login",component: LoginComponent},
     {path: "logout",component: LogoutComponent, canActivate:[RouteGuardService]},
     {path: "product-list", component: ProductListComponent},
     {path: "registrazione", component: RegistrazioneComponent},
@@ -54,9 +68,11 @@ const routes: Routes = [
         RouterModule.forRoot(routes),
         BrowserModule,
         HttpClientModule,
+        OktaAuthModule,
+
 
     ],
-    providers:[ProductService],
+    providers:[ProductService, { provide: OKTA_CONFIG, useValue: { oktaAuth }}],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
